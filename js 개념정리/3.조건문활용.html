@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>야간모드</h1>
+
+    <input type="button" value="night" onclick="
+      document.querySelector('body').style.backgroundColor = 'black';
+      document.querySelector('body').style.color = 'white';
+
+    ">
+
+    <input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+
+    ">
+
+    <input id="night_day" type="button" value="night" onclick="
+        if(document.querySelector('#night_day').value === 'night'){
+          document.querySelector('body').style.backgroundColor = 'black';
+          document.querySelector('body').style.color = 'white';
+          document.querySelector('#night_day').value = 'day';
+        }else{
+          document.querySelector('body').style.backgroundColor = 'white';
+          document.querySelector('body').style.color = 'black';
+          document.querySelector('#night_day').value = 'night';
+        }
+      ">
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem culpa praesentium porro! Deleniti, reiciendis.
+        Sed aperiam, ut neque, eius, labore dolores provident consequatur unde deleniti odit aut natus asperiores
+        itaque.</p>
+</body>
+
+</html>

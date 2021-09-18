@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>object</h1>
+    <h2>Create</h2>
+
+    <script>
+        var cook = {
+            "fastfood": "hamburger",
+            "cleanfood": "apple"
+        };
+        document.write("fastfood :"+cook.fastfood+'<br>');
+        document.write("cleanfood:"+cook.cleanfood+'<br>');
+        cook.gogi = "pige";
+        document.write("gogi : "+cook.gogi+'<br>');
+        cook['date meta'] = "so";
+        document.write("date meta : "+cook['date meta']+'<br>');
+
+    </script>
+
+    <h2>Iterate</h2>
+    <script>
+        for(var key in cook){
+            document.write(key+' : '+cook[key]+'<br>');
+        }
+    </script>
+
+    
+</body>
+</html>

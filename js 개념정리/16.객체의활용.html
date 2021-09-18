@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+      var Links = {
+        setColor:function(color){
+        var alist = document.querySelectorAll('a');
+            var i = 0;
+            while (i < alist.length) {
+            alist[i].style.color = color;
+            i = i + 1 ;
+            }
+      }
+      }
+
+
+
+      var Body = {
+          setColor:function(color){
+            document.querySelector('body').style.color = color;
+          },
+          setBackgroundColor:function(color){
+            document.querySelector('body').style.backgroundColor = color;
+          }
+      }
+
+    
+      function nightDayHandler(self){
+            var target = document.querySelector('body');
+        if(self.value === 'night') {
+            Body.setBackgroundColor('black');
+            Body.setColor('white');
+            self.value = 'day';
+
+            Links.setColor('powderblue');     
+        } else {
+                Body.setBackgroundColor('white');
+                Body.setColor('black');
+                self.value = 'night';
+
+                Links.setColor('blue');
+            }
+      }
+       
+
+  </script>
+
+</head>
+
+<body>
+
+  <h1>야간모드</h1>
+
+ <a href="#"> <h2>WEB</h2></a>
+
+  <ol>
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JAVAScript</a></li>
+  </ol>
+  
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem culpa praesentium porro! Deleniti, reiciendis.
+    Sed aperiam, ut neque, eius, labore dolores provident consequatur unde deleniti odit aut natus asperiores
+    itaque.</p> 
+
+
+  <br>
+  <br>
+  <br>
+
+
+    <input type="button" value="night" onclick="
+     nightDayHandler(this);
+    "> 
+  <br>
+  <br>
+  <br>
+ 
+  
+
+</body>
+
+</html>

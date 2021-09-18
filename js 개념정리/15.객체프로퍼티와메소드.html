@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>object</h1>
+    <h2>Create</h2>
+
+    <script>
+        var cook = {
+            "fastfood": "hamburger",
+            "cleanfood": "apple"
+        };
+        document.write("fastfood :"+cook.fastfood+'<br>');
+        document.write("cleanfood:"+cook.cleanfood+'<br>');
+        cook.gogi = "pige";
+        document.write("gogi : "+cook.gogi+'<br>');
+        cook['date meta'] = "so";
+        document.write("date meta : "+cook['date meta']+'<br>');
+
+    </script>
+
+    <h2>Iterate</h2>
+    <script>
+        for(var key in cook){
+            document.write(key+' : '+cook[key]+'<br>');
+        }
+    </script>
+
+    <h2>Property & Method</h2>
+
+    <script>
+        cook.showAll = function(){
+            for(var key in this){
+            document.write(key+' : '+this[key]+'<br>');
+           }
+
+        } 
+        cook.showAll();
+    </script>
+ 
+ 자바스크립트에서 객체안에 소속된 함수를 메소드라 칭하고, 객체안에 속한 변수를 프로퍼티라고 한다.
+    
+</body>
+</html>

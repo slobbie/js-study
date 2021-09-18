@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>function</h1>
+    <h2>Basic</h2>
+
+    <ul> 
+     <script>
+         function two(){
+         document.write('<li>2-1</li>');
+         document.write('<li>2-2</li>');
+         }
+         document.write('<li>1</li>');
+         two();
+         document.write('<li>3</li>');
+         two();
+     </script>
+    </ul>
+
+
+    <h2>Parameter & Argument</h2>
+
+    <script>
+        function onePlusOne(){
+            document.write(1+1);
+        }
+        onePlusOne();
+
+        function sum(left, right){
+            document.write(left+right+'<br>');
+        }
+        sum(2,3);
+        sum(3,4);
+    </script>
+   sum(left, right) 에 레프트 라는 변수와 라이트라는 변수를 정의 해준다
+   한국어로는 매개변수 영어로는 파라미터라고 한다
+
+   sum에 주는 값은 인자 영어로는 아규먼트
+
+    <h2>Return</h2>
+    
+</body>
+</html>
