@@ -38,31 +38,51 @@
   
   // Q5. find a student with the score 90
   {
+    const result = students.find((student) => { student.score === 90});
+    console.log(result);
   }
-  
+   
   // Q6. make an array of enrolled students
   {
+    const result = students.filter((student) => student.enrolled);
   }
   
   // Q7. make an array containing only the students' scores
   // result should be: [45, 80, 90, 66, 88]
   {
+    const result = students.map((student) => student.score);
   }
   
   // Q8. check if there is a student with the score lower than 50
   {
+    const result = students.some((student) => student.score < 50);
+
+    const result2 = !students.every((student) => student.score >= 50);
+
   }
   
   // Q9. compute students' average score
   {
+     const result = students.reduce((prev, curr) => prev + curr.score)
+     console.log(result / students.length);
   }
   
   // Q10. make a string containing all the scores
   // result should be: '45, 80, 90, 66, 88'
   {
+    const result = students
+    .map((student) => student.score)
+    .filter((score) => score >= 50)
+    .join();
+    console.log(result);
   }
   
   // Bonus! do Q10 sorted in ascending order
   // result should be: '45, 66, 80, 88, 90'
   {
+    const result = students
+    .map ((student) => student.score)
+    .sort((a,b) => b -a)
+    .join();
+    console.log(result):
   }
