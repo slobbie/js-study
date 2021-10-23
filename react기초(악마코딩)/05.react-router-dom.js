@@ -36,9 +36,11 @@ link to="" 를 사용한다.
 
 <Route path="/day/:day">
 
+
+
+    
 url이 포함된 값을 얻을때는 
 useParams 을 사용한다.
-
 
 //ex
 

@@ -8,3 +8,9 @@ Update  : PUT
 Delete   : DELETE
 
 메소드를 사용한다. 
+
+
+
+
+
+json-server --watch ./src/db/data.json --port 3001
