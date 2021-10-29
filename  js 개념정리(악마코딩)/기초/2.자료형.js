@@ -11,8 +11,12 @@ const name1 = 'Mike'
 
 const name1 = `Mike`
 
+javaScript에서는 
+
+문자를 '' , ""  로 감싸준다.
 
 '' 와 "" 는 별차이 없다
+
 
 
  const massage = 'I/'m a boy'; 
