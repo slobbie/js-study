@@ -31,7 +31,7 @@ const b = "1";
 console.log( a == b); --->  1 로 값이 변환됨
 
 
-console.log( a === b); //일치 연산자
+console.log( a === b); //일치 연산자  false  === 는 값고 같고 타입도 같아야 한다.
 
 값과 타입이 같은지 비교후 맞으면  true 로 변한
 
