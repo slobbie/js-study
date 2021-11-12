@@ -1,46 +1,24 @@
 import  Axios  from 'axios';
+import Head from "next/head";
 import { Loader } from "semantic-ui-react";
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react';
 import Item from "../../src/component/Itme";
 
 const Post = ({item}) => {
-  const router = useRouter();
-  const { id } = router.query;
-
-  const [item, setItem] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
-
-  const API_URL = `http://makeup-api.herokuapp.com/api/v1/products/${id}.json`;
-
-  function getData() {
-    Axios.get(API_URL).then((res) => {
-      setItem(res.data);
-      setIsLoading(false)
-    });
-  }
-
-  useEffect(() => {
-    if (id && id > 0) {
-      getData();
-    }
-  }, [id]);
-
-  return (
+  return(
     <>
-     {isLoading ? (
-      <div style={{ padding: "300px 0" }}>
-          <Loader inline="centered" active>
-            Loading
-          </Loader>
-      </div>
-     ) : (
-      <Item item={item} />
-     )}
-    </>
+    {item && (
+          <>
+            <Head>
+              <title>{item.name}</title>
+              <meta name="description" content={item.description}></meta>
+            </Head>
+            <Item item={item} />
+          </>
+        )}
+  </>
   );
-  
-  
 };
 
 export default Post;
@@ -76,3 +54,44 @@ Next js 모든 페이지 사전 렌더링 (Pre-rendering)
 - 항상 최신 상태 유지
 - getServerSideProps
  */
+
+
+
+// const Post = ({item}) => {
+//   const router = useRouter();
+//   const { id } = router.query;
+
+//   const [item, setItem] = useState({});
+//   const [isLoading, setIsLoading] = useState(true);
+
+//   const API_URL = `http://makeup-api.herokuapp.com/api/v1/products/${id}.json`;
+
+//   function getData() {
+//     Axios.get(API_URL).then((res) => {
+//       setItem(res.data);
+//       setIsLoading(false)
+//     });
+//   }
+
+//   useEffect(() => {
+//     if (id && id > 0) {
+//       getData();
+//     }
+//   }, [id]);
+
+//   return (
+//     <>
+//      {isLoading ? (
+//       <div style={{ padding: "300px 0" }}>
+//           <Loader inline="centered" active>
+//             Loading
+//           </Loader>
+//       </div>
+//      ) : (
+//       <Item item={item} />
+//      )}
+//     </>
+//   );
+  
+  
+// };
