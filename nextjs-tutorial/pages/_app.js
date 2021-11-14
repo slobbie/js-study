@@ -4,7 +4,7 @@ import Footer from '../src/component/Footer';
 import Top from '../src/component/Top';
 
 function MyApp({ Component, pageProps }) {
-  return(
+  return( 
     <div style={{ width: 1000, margin: "0 auto"}}>
       <Top />
       <Component {...pageProps} />
@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
 
 export default MyApp
 
-
+// 모든 페이지는 이곳을 통한다.
 //  *   페이지 전환시 레이아웃을 유지할 수 있다.
 //  *   페이지 전환시 상태값을 유지할 수 있다.
 //  *  componentDidcatch를 이용해서 커스텀 에러 핸들링을 할수 있다.

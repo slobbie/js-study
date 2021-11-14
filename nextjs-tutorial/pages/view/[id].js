@@ -1,3 +1,5 @@
+// 페이지 이름을 []로 감싸면 해당 페이지의 속한 아이디가 된다
+
 import  Axios  from 'axios';
 import Head from "next/head";
 import { Loader } from "semantic-ui-react";

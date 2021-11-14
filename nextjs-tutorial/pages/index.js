@@ -1,3 +1,6 @@
+// pages  폴더에 있는 파일들은 자동으로 라우팅 처리가된다 --> 전체를 보여주는 html page 가된다.
+// ex ) main , about 등 굵직한 페이지
+
 import Axios  from 'axios';
 import Head from 'next/head';
 import Image from 'next/image';
