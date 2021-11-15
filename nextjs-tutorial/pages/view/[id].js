@@ -38,6 +38,8 @@ export async function getServerSideProps(context) {
   };
 }
 
+//context 는 여러가지 정보를 알수 있다. 파라미스나  요청 응답 커리등이 담겨서온다.
+
 
 /*
 Next js 모든 페이지 사전 렌더링 (Pre-rendering)

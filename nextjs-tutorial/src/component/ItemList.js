@@ -9,7 +9,8 @@ export default function ItemList({list}) {
                 <Grid.Row>
                     {list.map((item)=>(
                         <Grid.Column key={item.id}>
-                            <Link href="/view/[id]" as={`/view/${item.id}`}> 
+                            <Link href="/view/[id]" as={`/view/${item.id}`}>  
+                            {/* href 는 내가 보는 링크 as는 사용자가 보는 링크이다. */}
                                 <a>
                                     <div lassName={styles.wrap}>
                                         <img 
