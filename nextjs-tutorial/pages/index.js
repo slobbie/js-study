@@ -12,8 +12,9 @@ import styles from '../styles/Home.module.css';
 export default function Home() {
   const [list, setList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const API_URL =
-    "http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline";
+
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
+    
 
     function getData() {
       Axios.get(API_URL).then((res) => {
