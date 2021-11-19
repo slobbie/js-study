@@ -1,3 +1,5 @@
+// for , while, do.. while
+
 반복문 loop
 동일한 작업을 여러번 반복
 
