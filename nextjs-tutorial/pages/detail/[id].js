@@ -8,6 +8,17 @@ import { useEffect, useState } from 'react';
 import Item from "../../src/component/Itme";
 
 const Post = ({item, name}) => {
+  const router = useRouter();
+
+  if(router.isFallback) {
+    return (
+      <div style={{ padding: "100px 0"}}>
+        <Loader active inline="centered">
+          Loading
+        </Loader>
+      </div>
+    ); 
+  }   
   return(
     <>
     {item && (
@@ -27,13 +38,23 @@ const Post = ({item, name}) => {
 export default Post;
 
 export async function getStaticPaths() {
+  const apiUrl = process.env.apiUrl;
+  const res = await Axios.get(apiUrl);
+  const data = res.data;
   return {
-    paths: [
-      { params: { id: '740'}},
-      { params: { id: '730'}},
-      { params: { id: '729'}},
-    ],
-    fallback: false
+    // paths: [ 
+    //   { params: { id: '740'}},
+    //   { params: { id: '730'}},
+    //   { params: { id: '729'}},
+    // ],
+    paths: data.slice(0, 9).map( item => ({ 
+      params: {
+        id : item.id.toStrind(),
+      }
+    })),
+    fallback: true, 
+    // fallback 이 false 면 없는 페이지는 대응 하지 않는다 --> 404 오류로 이동
+    // true 면 최초에 빈 프록스가 빈상태로 그려지고 이후에 백그라운드에서 정적파일로 html 과 css 를 그려준다 그후 넥스트js는 프리렌더링 목록에 추가해준다.
   };
 }
 
