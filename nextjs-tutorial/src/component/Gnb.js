@@ -13,10 +13,12 @@ export default function Gnb() {
 
     function goLink(e, data) {
       if(data.name === 'home') {
-          router.push('/')
+          router.push('/');
       }else if (data.name === 'about') {
-          router.push('/about')
-      }
+          router.push('/about');
+      }else if (data.name === 'admin') {
+        router.push('/admin');
+    }
     }
     return (
         <Menu inverted>
@@ -30,13 +32,20 @@ export default function Gnb() {
           active={activeItem === 'about'}
           onClick={goLink}
         />
-        {/* <Menu.Item 
+        <Menu.Item 
           name='contact Us'
           active={activeItem === 'contact'}
           onClick={()=> {
             router.push("/contact")
           }}
-        /> */}
+        />
+         <Menu.Item 
+          name='admin'
+          active={activeItem === 'admin'}
+          onClick={()=> {
+            router.push("/admin");
+          }}
+        />
       </Menu>
     )
 }
