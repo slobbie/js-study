@@ -12,7 +12,7 @@ export default function ItemList({list}) {
                             <Link href="/view/[id]" as={`/view/${item.id}`}>  
                             {/* href 는 내가 보는 링크 as는 사용자가 보는 링크이다. */}
                                 <a>
-                                    <div lassName={styles.wrap}>
+                                    <div className={styles.wrap}>
                                         <img 
                                         src={item.image_link} 
                                         alt={item.name} 
